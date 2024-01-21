@@ -155,6 +155,7 @@ let common = {
         request({location: location, data: data}, (result) => {
             common.modal_hide();
             html('table', result.html);
+            html('paginator', result.paginator);
         });
     },
 

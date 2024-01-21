@@ -104,5 +104,7 @@ function paginator($total, $offset, $q, $path, &$out) {
             if ($min * $q < $total-$q) $out .= '&nbsp;&nbsp;...&nbsp;&nbsp;';
             $out .= '<a href="/'.$path.'offset='.(($total-1)-($total-1)%$q).'">'.ceil($total/$q).'</a>';
         }
+    }else{
+        $out .= '<a href="/'.$path.'offset=0">1</a>';
     }
 }
